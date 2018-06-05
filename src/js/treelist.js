@@ -199,6 +199,21 @@ $(function () {
       $(this).parent().hide();
     }
   })
+  /*上传文件*/
+  $("#fUpload").on('change', function () {
+    $("#ulList").empty();
+    var fp = $("#fUpload");
+    var lg = fp[0].files.length; // get length
+    var items = fp[0].files;
+    var fragment = "";
+    if (lg > 0) {
+      for (var i = 0; i < lg; i++) {
+        var fileName = items[i].name; // get file name
+      }
+      $("#ulList").val(fileName);
+    }
+  });
+
 })
 
 
