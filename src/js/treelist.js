@@ -115,27 +115,31 @@ $(function () {
   $(".waitfinish").on("click",function () {
     $(".waitfinish_later").click();
     $(this).addClass('cor').siblings().removeClass('cor');
-    $(".outline ,.outline_pz").removeClass("cor");
+    $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".onlinefinish").on("click",function () {
     $(".onlinefinish_later").click();
     $(this).addClass('cor').siblings().removeClass('cor');
-    $(".outline ,.outline_pz").removeClass("cor");
+    $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".finished").on("click",function () {
     $(".finished_later").click();
     $(this).addClass('cor').siblings().removeClass('cor');
-    $(".outline ,.outline_pz").removeClass("cor");
+    $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".outonlinelist").on("click",function () {
     $(".outonlinelist_later").click();
     $(this).addClass('cor').siblings().removeClass('cor');
-    $(".outline ,.outline_pz").removeClass("cor");
+    $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
   $(".outlinemuban").on("click",function () {
     $(".outlinemuban_later").click();
     $(this).addClass('cor').siblings().removeClass('cor');
-    $(".outline ,.outline_pz").removeClass("cor");
+    $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
+  })
+  $(".outline_pz ").on("click",function () {
+    $(this).addClass('cor').siblings().removeClass('cor');
+    $(".outline  ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
 
   $(".outline").on("click",function () {
