@@ -199,7 +199,6 @@ $(function () {
       $(this).parent().hide();
     }
   })
-
 })
 
 
