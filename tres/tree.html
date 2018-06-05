@@ -46,33 +46,40 @@
     </div>
   </div>
   <div class="righttable">
-    <ul id="myTab" class="nav nav-tabs">
-      <li class="active">
-        <a class="waitfinish_later" href="#waitfinish" data-toggle="tab">
-          待完成任务
-        </a>
-      </li>
-      <li>
-        <a class="onlinefinish_later" href="#inline" data-toggle="tab">
-          执行中任务
-        </a>
-      </li>
-      <li>
-        <a class="finished_later" href="#finish" data-toggle="tab">
-          已完成任务
-        </a>
-      </li>
-      <li>
-        <a class="outonlinelist_later" href="#outlineset" data-toggle="tab">
-          外呼任务管理
-        </a>
-      </li>
-      <li>
-        <a class="outlinemuban_later" href="#outlinemange" data-toggle="tab">
-          外呼模板管理
-        </a>
-      </li>
-    </ul>
+    <div class="ul_style">
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active waitfinish_later">
+          <a data-toggle="tab" href="#waitfinish" class="left_a">
+            待完成任务
+          </a>
+          <a class="right_a">X</a>
+        </li>
+        <li class="onlinefinish_later">
+          <a data-toggle="tab" href="#inline" class="left_a">
+            执行中任务
+          </a>
+          <a class="right_a">X</a>
+        </li>
+        <li class="finished_later" >
+          <a data-toggle="tab" href="#finish" class="left_a">
+            已完成任务
+          </a>
+          <a class="right_a">X</a>
+        </li>
+        <li class="outonlinelist_later" >
+          <a data-toggle="tab"  href="#outlineset" class="left_a">
+            外呼任务管理
+          </a>
+          <a class="right_a">X</a>
+        </li>
+        <li class="outlinemuban_later" >
+          <a data-toggle="tab" href="#outlinemange" class="left_a">
+            外呼模板管理
+          </a>
+          <a class="right_a">X</a>
+        </li>
+      </ul>
+    </div>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade in active" id="waitfinish">
         <select class="form-control select-time">
