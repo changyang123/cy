@@ -183,6 +183,10 @@ $(function () {
     $(".inonerlist").show();
     $("#loading").show();
   })
+  $(".img_edit").on("click",function () {
+    $("#newaddproai").show();
+    $("#loading").show();
+  })
   $(".close_two ,.ipt_cancel_long").on("click",function () {
     if($('#newaddproai').is(':hidden')){
       $(".inonerlist").hide();

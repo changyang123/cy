@@ -118,6 +118,7 @@
   width: 110px;
   height:30px;
   line-height: 24px;
+  margin-right: 20px;
   background:#fff;
   color:#000000;
   outline:none;
@@ -139,8 +140,6 @@
 }
 .newaddproai{
   float:left;
-  margin-left:20px;
-  margin-right:10px;
   width: 110px;
   height:30px;
   line-height: 24px;
