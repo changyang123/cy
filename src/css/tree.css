@@ -954,3 +954,6 @@ tr:nth-child(even){
   height: 250px;
   overflow: auto;
 }
+.waitfinish ,.onlinefinish ,.finished ,.outonlinelist ,.outlinemuban{
+  cursor: pointer;
+}
