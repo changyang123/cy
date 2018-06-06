@@ -141,7 +141,6 @@ $(function () {
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline  ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
-
   $(".outline").on("click",function () {
     $(this).addClass("cor").find("cor").removeClass("cor");
     $(".outline_pz ,.waitfinish ,.onlinefinish  ,.finished").removeClass("cor");
