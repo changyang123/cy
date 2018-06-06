@@ -48,92 +48,92 @@ $(function () {
 
   /*新增外呼任务*/
   $(".newaddpro").on("click",function () {
-    $("#loading").show();
-    $("#newaddout").show();
+    $("#loading").fadeIn();
+    $("#newaddout").fadeIn();
   })
   $(".close_outphone ,.ipt_cancel_outphone").on("click",function () {
-    $("#loading").hide();
-    $("#newaddout").hide();
+    $("#loading").fadeOut();
+    $("#newaddout").fadeOut();
   })
   /*新增呼叫时间设置*/
   $(".btn_new_out").on("click",function () {
-    $(".add_time_out").show();
+    $(".add_time_out").fadeIn();
   })
   $(".close_in_out ,.ipt_cancel_out").on("click",function () {
-    $(".add_time_out").hide();
+    $(".add_time_out").fadeOut();
   })
 
   /*新增智能外呼任务*/
   $(".newaddproai ,.edit_list_w").on("click",function () {
-    $("#loading").show();
-    $("#newaddproai").show();
+    $("#loading").fadeIn();
+    $("#newaddproai").fadeIn();
   })
   $(".close_out ,.ipt_cancel").on("click",function () {
-    $("#loading").hide();
-    $("#newaddproai").hide();
+    $("#loading").fadeOut();
+    $("#newaddproai").fadeOut();
   })
   /*新增呼叫时间设置*/
   $(".btn_new").on("click",function () {
-    $(".add_time").show();
+    $(".add_time").fadeIn();
   })
   $(".close_in ,.ipt_cancel_in").on("click",function () {
-    $(".add_time").hide();
+    $(".add_time").fadeOut();
   })
   /*导入导出客户清单*/
   $(".ipt_outlist").on("click",function () {
-    $(".inonerlist").show();
+    $(".inonerlist").fadeIn();
   })
   $(".ipt_cancel_long ,.close_outlong").on("click",function () {
-    $(".inonerlist").hide();
+    $(".inonerlist").fadeOut();
   })
   /*增加客户窗口*/
   $(".add_man").on("click",function () {
-    $(".add_manlist").show();
+    $(".add_manlist").fadeIn();
   })
   $(".close_addman ,.ipt_cancel_addman").on("click",function () {
-    $(".add_manlist").hide();
+    $(".add_manlist").fadeOut();
   })
   /*新增营销模板*/
   $(".newmuban").on("click",function () {
-    $("#loading").show();
-    $(".add_sellmuban").show();
+    $("#loading").fadeIn();
+    $(".add_sellmuban").fadeIn();
   })
   $(".close_addsell ,.ipt_cancel_addsell").on("click",function () {
-    $(".add_sellmuban").hide();
-    $("#loading").hide();
+    $(".add_sellmuban").fadeOut();
+    $("#loading").fadeOut();
   })
   /*新增外呼记录*/
   $(".close_outlist ,.ipt_cancel_addoutlist").on("click",function () {
-    $(".add_outlist").hide();
-    $("#loading").hide();
+    $(".add_outlist").fadeOut();
+    $("#loading").fadeOut();
   })
   $(".newoutphonelist ,.look_list ,.edit_list").on("click",function () {
-    $("#loading").show();
-    $(".add_outlist").show();
+    $("#loading").fadeIn();
+    $(".add_outlist").fadeIn();
   })
   /*tab切换*/
   $(".waitfinish").on("click",function () {
-    $(".waitfinish_later").show().children("a").eq(0).click();
+    $(".waitfinish_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".onlinefinish").on("click",function () {
-    $(".onlinefinish_later").show().children("a").eq(0).click();
+    $(".onlinefinish_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".finished").on("click",function () {
-    $(".finished_later").show().children("a").eq(0).click();
+    $(".finished_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
   $(".outonlinelist").on("click",function () {
-    $(".outonlinelist_later").show().children("a").eq(0).click();
+    $(".outonlinelist_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
   $(".outlinemuban").on("click",function () {
-    $(".outlinemuban_later").show().children("a").eq(0).click();
+    $(".outlinemuban_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
@@ -155,52 +155,52 @@ $(function () {
   })
   /*任务清单 已完成*/
   $(".look_list_finish").on("click",function () {
-    $("#loading").show();
-    $(".add_list").show();
+    $("#loading").fadeIn();
+    $(".add_list").fadeIn();
   })
   $(".close_list_finish ,.ipt_cancel_list_fin").on("click",function () {
-    $(".add_list").hide();
-    $("#loading").hide();
+    $(".add_list").fadeOut();
+    $("#loading").fadeOut();
   })
   /*任务清单 待完成 执行中*/
   $(".look_list_wait ,.look_list_online").on("click",function () {
-    $("#loading").show();
-    $(".add_listonline").show();
+    $("#loading").fadeIn();
+    $(".add_listonline").fadeIn();
   })
   $(".close_list_online ,.ipt_cancel_list").on("click",function () {
-    $(".add_listonline").hide();
-    $("#loading").hide();
+    $(".add_listonline").fadeOut();
+    $("#loading").fadeOut();
   })
   /*任务清单 已完成——交互记录*/
   $(".play").on("click",function () {
-    $(".add_list_play").show();
+    $(".add_list_play").fadeIn();
   })
   $(".close_play").on("click",function () {
-    $(".add_list_play").hide();
+    $(".add_list_play").fadeOut();
   })
   /*外呼任务管理操作*/
   $(".img_add").on("click",function () {
-    $(".inonerlist").show();
-    $("#loading").show();
+    $(".inonerlist").fadeIn();
+    $("#loading").fadeIn();
   })
   $(".img_edit").on("click",function () {
-    $("#newaddproai").show();
-    $("#loading").show();
+    $("#newaddproai").fadeIn();
+    $("#loading").fadeIn();
   })
   $(".close_two ,.ipt_cancel_long").on("click",function () {
     if($('#newaddproai').is(':hidden')){
-      $(".inonerlist").hide();
-      $("#loading").hide();
+      $(".inonerlist").fadeOut();
+      $("#loading").fadeOut();
     }else{
-      $('#newaddproai').show()
-      $("#loading").show();
+      $('#newaddproai').fadeIn()
+      $("#loading").fadeIn();
     }
   })
   /*tab切换交互*/
   $(".right_a").on("click",function () {
     if($(this).is(':hidden')){
     }else{
-      $(this).parent().hide();
+      $(this).parent().fadeOut();
     }
   })
   /*上传文件*/
