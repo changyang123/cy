@@ -629,6 +629,23 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #333333;
+  font-size: 0;
+  cursor: pointer;
+}
+.btn_in_d{
+  width:52px !important;
+  height: 30px;
+  line-height: 24px;
+  float: left;
+  margin-left:-70px;
+  margin-right: 17px;
+  background: #fff;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #333333;
+  cursor: pointer;
 }
 .btn_list_down{
   width: 100px !important;
