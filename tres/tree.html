@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>webproject</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
   <link href="../src/css/bootstrap.min.css" rel="stylesheet">
   <link href="../src/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="../src/css/tree.css" rel="stylesheet"/>
+  <link href="../src/css/froala_editor.min.css" rel="stylesheet" type="text/css">
+  <link href="../src/css/froala_page.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -718,7 +721,13 @@
         <span class="time_text">营销主题</span>
         <input class="sell_tle" type="text" placeholder="20个字以内" />
         <span class="time_text">营销脚本</span>
-        <textarea class="textarea_sell"></textarea>
+        <!--<textarea class="textarea_sell"></textarea>-->
+        <section id="editor">
+          <div id='edit'>
+            <h1>Click and edit</h1>
+          </div>
+        </section>
+
       </div>
       <div class="addprobtn_addsell">
         <input class="ipt_ready_addsell" type="button" value="确定"/>
@@ -1021,4 +1030,21 @@
 <script src="../src/js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="../src/js/treelist.js"></script>
 <script src="../src/js/time.js"></script>
+<!--文本编辑器-->
+<script src="../src/js/plugins/froala_editor.min.js"></script>
+<!--[if lt IE 9]>
+<script src="../src/js/plugins/froala_editor_ie8.min.js"></script>
+<![endif]-->
+<script src="../src/js/plugins/tables.min.js"></script>
+<script src="../src/js/plugins/lists.min.js"></script>
+<script src="../src/js/plugins/colors.min.js"></script>
+<script src="../src/js/plugins/media_manager.min.js"></script>
+<script src="../src/js/plugins/font_family.min.js"></script>
+<script src="../src/js/plugins/font_size.min.js"></script>
+<script src="../src/js/plugins/block_styles.min.js"></script>
+<script>
+  $(function(){
+    $('#edit').editable({inlineMode: false, alwaysBlank: true})
+  });
+</script>
 </html>

@@ -365,7 +365,9 @@
 .addprobtn_addsell{
    width: 230px;
    float: left;
-   margin-left: 33%;
+   margin-left: 25%;
+   position: absolute;
+   bottom: 30px;
  }
 .addprobtn_in_list{
    width: 300px;
@@ -920,6 +922,14 @@ tr:nth-child(even){
 }
 .right_a{
   float: left;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+  padding: 0px 5px 0px 5px !important;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+#editor{
+  float: left;
+}
+.froala-element{
+  height: 250px;
+  overflow: auto;
 }
