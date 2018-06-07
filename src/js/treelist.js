@@ -163,7 +163,7 @@ $(function () {
     $("#loading").fadeOut();
   })
   /*任务清单 待完成 执行中*/
-  $(".look_list_wait ,.look_list_online").on("click",function () {
+  $(".look_list_wait").on("click",function () {
     $("#loading").fadeIn();
     $(".add_listonline").fadeIn();
   })
@@ -237,6 +237,11 @@ $(function () {
     $('.add_time').css({
       position:'absolute',
       left: ($(window).width() - $('.add_time').outerWidth())/2,
+    });
+    /*新增外呼任务时间设置*/
+    $('.add_time_out').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_time_out').outerWidth())/2,
     });
     /*导入导出客户清单*/
     $('.inonerlist').css({

@@ -514,25 +514,27 @@
   position: absolute;
   width: 445px;
   height: 315px;
+  top: 15%;
   background: #ffffff;
   border: 1px solid #333333;
+  z-index: 151;
   display: none;
 }
 .add_time_out {
+  position: absolute;
   width: 445px;
   height: 315px;
-  position: absolute;
+  top: 15%;
   background: #ffffff;
-  margin-top: 10%;
-  margin-left: 11%;
   border: 1px solid #333333;
+  z-index: 151;
   display: none;
 }
 .add_manlist{
   position: absolute;
   width: 450px;
   height: 400px;
-  top: 7%;
+  top: 15%;
   background: #ffffff;
   border: 1px solid #333333;
   z-index: 152;
@@ -726,6 +728,7 @@
 .look_list_wait ,.edit_list_w ,.remove_list_wait{
   float: left;
   margin-left: 5px;
+  margin-top: 2px;
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -748,14 +751,12 @@
   border:1px solid #333333;
 }
 .play{
-  margin-left: 15px;
   cursor: pointer;
 }
 .look_list_finish{
   width:30px;
   height: 20px;
   line-height: 14px;
-  margin-left: 20px;
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -806,6 +807,7 @@
   position: absolute;
   width: 600px;
   height: 520px;
+  top: 10%;
   background: #fff;
   z-index: 150;
   display: none;
