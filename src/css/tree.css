@@ -1,6 +1,6 @@
 .container{
   width:100%;
-  min-width: 825px;
+  min-width: 900px;
   height: auto;
   float: left;
  }
@@ -8,13 +8,20 @@
   width:15%;
   height: 580px;
   float: left;
-  border:1px solid #333;
+}
+.right_padding{
+  width: 85%;
+  float: left;
+  height: 580px;
+  background: #F0f3fa;
 }
 .righttable{
-  width: 83%;
-  height: auto;
+  width: 98%;
+  height: 570px;
   float: left;
-  margin-left:1%;
+  margin-top: 10px;
+  margin-left: 10px;
+  background: #FFFFFF;
 }
 .ipt-text{
   width:150px;
@@ -69,9 +76,16 @@
   line-height: 25px;
   background: #999999;
 }
+.table_border{
+  width: 96%;
+  float: left;
+  margin-left: 2%;
+}
+
 .table th, .table td{
   padding: 0;
   line-height: 25px;
+  text-align: center;
 }
 .table{
   margin-bottom:5px !important;
@@ -910,7 +924,6 @@ tr:nth-child(even){
   width: 480px;
   height: 40px;
   float: left;
-  border-radius: 10px;
   border:1px solid #333333;
 }
 .play_dialogue{
@@ -935,6 +948,10 @@ tr:nth-child(even){
 #myTab li{
   cursor: pointer;
 }
+.wait_border{
+  width: 100%;
+  float: left;
+}
 .waitfinish_later ,.onlinefinish_later ,.finished_later ,.outonlinelist_later ,.outlinemuban_later{
   display: none;
 }
@@ -943,9 +960,7 @@ tr:nth-child(even){
 }
 .right_a{
   float: left;
-  padding: 0px 5px 0px 5px !important;
-  margin-top: 10px;
-  border-radius: 50px;
+  padding: 8px 5px 8px 5px !important;
 }
 #editor{
   float: left;
@@ -956,4 +971,28 @@ tr:nth-child(even){
 }
 .waitfinish ,.onlinefinish ,.finished ,.outonlinelist ,.outlinemuban{
   cursor: pointer;
+}
+.nav-tabs>li>a, .nav-pills>li>a{
+  margin-right: 0 !important;
+}
+.icon_num{
+  width: 20px;
+  height: 20px;
+  float: right;
+  line-height: 20px !important;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #ff6e5a;
+  color: #FFFFFF;
+}
+.icon_y{
+  width: 20px;
+  height: 20px;
+  line-height: 20px !important;
+  float: right;
+  text-align: center;
+  font-size: 18px;
+  color: #20ff5c;
 }

@@ -175,6 +175,9 @@ $(function () {
     $(".add_list_play").fadeIn();
   })
   $(".close_play").on("click",function () {
+    var audio = $("#audio");
+    var stop = audio.get(0);
+    stop.pause();
     $(".add_list_play").fadeOut();
   })
   /*外呼任务管理操作*/

@@ -23,12 +23,15 @@
       <div id="collapseOne" class="accordion-body collapse in">
         <div class="accordion-inner waitfinish">
           <a class="" href="#waitfinish" data-toggle="tab">待完成任务</a>
+          <div class="icon_num">0</div>
         </div>
         <div class="accordion-inner onlinefinish">
           <a class="" href="#inline" data-toggle="tab">执行中任务</a>
+          <div class="icon_num">0</div>
         </div>
         <div class="accordion-inner finished">
           <a class="" href="#finish" data-toggle="tab">已完成任务</a>
+          <div class="icon_y">√</div>
         </div>
       </div>
     </div>
@@ -50,281 +53,83 @@
       </div>
     </div>
   </div>
-  <div class="righttable">
-    <div class="ul_style">
-      <ul id="myTab" class="nav nav-tabs">
-        <li class="active waitfinish_later">
-          <a data-toggle="tab" href="#waitfinish" class="left_a">
-            待完成任务
-          </a>
-          <a class="right_a">X</a>
-        </li>
-        <li class="onlinefinish_later">
-          <a data-toggle="tab" href="#inline" class="left_a">
-            执行中任务
-          </a>
-          <a class="right_a">X</a>
-        </li>
-        <li class="finished_later" >
-          <a data-toggle="tab" href="#finish" class="left_a">
-            已完成任务
-          </a>
-          <a class="right_a">X</a>
-        </li>
-        <li class="outonlinelist_later" >
-          <a data-toggle="tab"  href="#outlineset" class="left_a">
-            外呼任务管理
-          </a>
-          <a class="right_a">X</a>
-        </li>
-        <li class="outlinemuban_later" >
-          <a data-toggle="tab" href="#outlinemange" class="left_a">
-            外呼模板管理
-          </a>
-          <a class="right_a">X</a>
-        </li>
-      </ul>
-    </div>
+  <div class="right_padding">
+    <div class="righttable">
+      <div class="ul_style">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active waitfinish_later">
+            <a data-toggle="tab" href="#waitfinish" class="left_a">
+              待完成任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="onlinefinish_later">
+            <a data-toggle="tab" href="#inline" class="left_a">
+              执行中任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="finished_later" >
+            <a data-toggle="tab" href="#finish" class="left_a">
+              已完成任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="outonlinelist_later" >
+            <a data-toggle="tab"  href="#outlineset" class="left_a">
+              外呼任务管理
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="outlinemuban_later" >
+            <a data-toggle="tab" href="#outlinemange" class="left_a">
+              外呼模板管理
+            </a>
+            <a class="right_a">X</a>
+          </li>
+        </ul>
+      </div>
 
-    <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade in active" id="waitfinish">
-        <select class="form-control select-time">
-          <option selected>不限时间</option>
-          <option selected>一个小时</option>
-        </select>
-        <span class="num-protext">任务编号</span>
-        <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
-        <input class="search-btn" type="button" value="搜索"/>
-        <table class="table  table-bordered table-responsive">
-          <thead>
-          <tr class="color_gary">
-            <th>编号</th>
-            <th>任务名称</th>
-            <th>任务模板</th>
-            <th>任务类型</th>
-            <th>任务执行时间</th>
-            <th class="handle_finish">操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <img class="look_list_wait" src="../src/img/list.png" alt="">
-              <img class="edit_list_w" src="../src/img/edit.png" alt="">
-              <img class="remove_list_wait" src="../src/img/close.png" alt="">
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-pane fade" id="inline">
-        <select class="form-control select-time">
-          <option selected>不限时间</option>
-          <option selected>一个小时</option>
-        </select>
-        <span class="num-protext">任务编号</span>
-        <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
-        <input class="search-btn" type="button" value="搜索"/>
-        <table class="table  table-bordered  table-responsive">
-          <thead>
-          <tr class="color_gary">
-            <th>编号</th>
-            <th>任务名称</th>
-            <th>任务模板</th>
-            <th>任务类型</th>
-            <th>任务执行时间</th>
-            <th class="handle_finish">操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <img class="look_list_wait margin_wait" src="../src/img/list.png" alt="">
-              <img class="remove_list_wait" src="../src/img/stop.png" alt="">
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-pane fade" id="finish">
-        <select class="form-control select-time">
-          <option selected>不限时间</option>
-          <option selected>一个小时</option>
-        </select>
-        <span class="num-protext">任务编号</span>
-        <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
-        <input class="search-btn" type="button" value="搜索"/>
-        <table class="table  table-bordered table-responsive ">
-          <thead>
-          <tr class="color_gary">
-            <th>编号</th>
-            <th>任务名称</th>
-            <th>任务模板</th>
-            <th>任务类型</th>
-            <th>任务执行时间</th>
-            <th class="handle_finish">操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <input class="look_list_finish" type="button" value="查看" />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-pane fade" id="outlineset">
-        <input class="form-control ipt-outline" type="text" placeholder="任务名称"/>
-        <input class="form-control ipt-text" type="text" placeholder="话术模板ID"/>
-        <select class="form-control select-time3">
-          <option selected>不限时间</option>
-          <option selected>一个小时</option>
-        </select>
-        <input class="search-btn " type="button" value="搜索"/>
-        <div class="addpro">
-          <input class="newaddpro" type="button" value="新增外呼任务"/>
-          <input class="newaddproai" type="button" value="新增智能外呼任务"/>
-          <select class="page">
-            <option>20条/页</option>
-          </select>
-          <!-- 分页-->
-          <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-          </ul>
-        </div>
-        <table class="table  table-bordered  table-responsive">
-          <thead>
-          <tr class="color_gary">
-            <th>外呼任务名称</th>
-            <th>任务类型</th>
-            <th>话术模板</th>
-            <th>外呼记录模板</th>
-            <th>热线队列</th>
-            <th>状态</th>
-            <th>生效日期</th>
-            <th>失效日期</th>
-            <th class="handle_finish">操作</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <img class="img_add" src="../src/img/addman.png"/>
-              <img class="img_edit" src="../src/img/edit.png"/>
-              <img class="img_stop" src="../src/img/stop.png"/>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-pane fade" id="outlinemange">
-        <input class="newmuban" type="button" value="新增营销模板"/>
-        <input class="newoutphonelist" type="button" value="新增外呼记录"/>
-        <table class="table   table-bordered table-responsive table_loca">
-          <thead>
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="waitfinish">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered table-responsive">
+            <thead>
             <tr class="color_gary">
-              <th>模板名称</th>
-              <th>模板类型</th>
-              <th class="handle">操作</th>
+              <th>编号</th>
+              <th>任务名称</th>
+              <th>任务模板</th>
+              <th>任务类型</th>
+              <th>任务执行时间</th>
+              <th class="handle_finish">操作</th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr>
-              <td></td>
-              <td></td>
+              <td>123</td>
+              <td>任务一</td>
+              <td>模板一</td>
+              <td>类型一</td>
+              <td>2018.6.6</td>
               <td>
-                <input class="look_list" type="button" value="查看" />
-                <input class="edit_list" type="button" value="编辑" />
-                <input class="remove_list" type="button" value="删除" />
+                <img class="look_list_wait" src="../src/img/list.png" alt="">
+                <img class="edit_list_w" src="../src/img/edit.png" alt="">
+                <img class="remove_list_wait" src="../src/img/close.png" alt="">
               </td>
             </tr>
             <tr>
               <td></td>
               <td></td>
               <td></td>
-            </tr>
-            <tr>
               <td></td>
               <td></td>
               <td></td>
@@ -333,9 +138,228 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
-          </tbody>
-        </table>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="inline">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered  table-responsive">
+            <thead>
+            <tr class="color_gary">
+              <th>编号</th>
+              <th>任务名称</th>
+              <th>任务模板</th>
+              <th>任务类型</th>
+              <th>任务执行时间</th>
+              <th class="handle_finish">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <img class="look_list_wait margin_wait" src="../src/img/list.png" alt="">
+                <img class="remove_list_wait" src="../src/img/stop.png" alt="">
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="finish">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered table-responsive ">
+            <thead>
+            <tr class="color_gary">
+              <th>编号</th>
+              <th>任务名称</th>
+              <th>任务模板</th>
+              <th>任务类型</th>
+              <th>任务执行时间</th>
+              <th class="handle_finish">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <input class="look_list_finish" type="button" value="查看" />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="outlineset">
+          <div class="wait_border">
+            <input class="form-control ipt-outline" type="text" placeholder="任务名称"/>
+            <input class="form-control ipt-text" type="text" placeholder="话术模板ID"/>
+            <select class="form-control select-time3">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <input class="search-btn " type="button" value="搜索"/>
+          </div>
+          <div class="addpro">
+            <input class="newaddpro" type="button" value="新增外呼任务"/>
+            <input class="newaddproai" type="button" value="新增智能外呼任务"/>
+            <select class="page">
+              <option>20条/页</option>
+            </select>
+            <!-- 分页-->
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered  table-responsive">
+            <thead>
+            <tr class="color_gary">
+              <th>外呼任务名称</th>
+              <th>任务类型</th>
+              <th>话术模板</th>
+              <th>外呼记录模板</th>
+              <th>热线队列</th>
+              <th>状态</th>
+              <th>生效日期</th>
+              <th>失效日期</th>
+              <th class="handle_finish">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <img class="img_add" src="../src/img/addman.png"/>
+                <img class="img_edit" src="../src/img/edit.png"/>
+                <img class="img_stop" src="../src/img/stop.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="outlinemange">
+          <input class="newmuban" type="button" value="新增营销模板"/>
+          <input class="newoutphonelist" type="button" value="新增外呼记录"/>
+          <div class="table_border">
+            <table class="table   table-bordered table-responsive table_loca">
+
+              <thead>
+              <tr class="color_gary">
+                <th>模板名称</th>
+                <th>模板类型</th>
+                <th class="handle">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <input class="look_list" type="button" value="查看" />
+                  <input class="edit_list" type="button" value="编辑" />
+                  <input class="remove_list" type="button" value="删除" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -614,7 +638,7 @@
         <input class="btn_list" type="button" value="导出列表" />
         <input class="add_man" type="button" value="增加客户" />
       </div>
-      <table class="table table-bordered   tb-way">
+      <table class="table table-bordered table-responsive  tb-way">
         <thead>
         <tr class="color_gary">
           <th>编号</th>
@@ -1015,7 +1039,7 @@
       </div>
       <div class="content">
         <div class="content_div">
-          <div class="play_mic"></div>
+          <audio  class="play_mic" id="audio" controls src="../src/img/123.mp3"></audio>
           <div class="play_dialogue">
           </div>
         </div>
