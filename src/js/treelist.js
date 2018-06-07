@@ -46,6 +46,7 @@ $(function () {
   timesetting($("#begin_time_out").val(timestr));
   timesetting($("#end_time_out").val(timestr));
 
+  $('#edit').editable({inlineMode: false, alwaysBlank: true})
   /*新增外呼任务*/
   $(".newaddpro").on("click",function () {
     $("#loading").fadeIn();
@@ -219,6 +220,61 @@ $(function () {
       $("#ulList").val(fileName);
     }
   });
+  /*所有弹框居中*/
+  $(window).resize(function(){
+    /*新增外呼任务*/
+    $('#newaddout ').css({
+      position:'absolute',
+      left: ($(window).width() - $('#newaddout').outerWidth())/2,
+    });
+  });
+    /*新增智能外呼任务*/
+    $('#newaddproai').css({
+      position:'absolute',
+      left: ($(window).width() - $('#newaddproai').outerWidth())/2,
+    });
+    /*新增呼叫时间设置*/
+    $('.add_time').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_time').outerWidth())/2,
+    });
+    /*导入导出客户清单*/
+    $('.inonerlist').css({
+      position:'absolute',
+      left: ($(window).width() - $('.inonerlist').outerWidth())/2,
+    });
+    /*增加客户*/
+    $('.add_manlist').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_manlist').outerWidth())/2,
+    });
+    /*新增营销模板*/
+    $('.add_sellmuban').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_sellmuban').outerWidth())/2,
+    });
+    /*新增外呼记录*/
+    $('.add_outlist').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_outlist').outerWidth())/2,
+    });
+    /*<!--任务清单 待完成 执行中-->*/
+    $('.add_listonline').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_listonline').outerWidth())/2,
+    });
+    /*任务清单已完成*/
+    $('.add_list').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_list').outerWidth())/2,
+    });
+    /*交互记录*/
+    $('.add_list_play').css({
+      position:'absolute',
+      left: ($(window).width() - $('.add_list_play').outerWidth())/2,
+    });
+  // 最初运行函数
+  $(window).resize();
 
 })
 
