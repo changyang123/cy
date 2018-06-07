@@ -1,40 +1,1076 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <title>webproject</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="css/tree.css" rel="stylesheet"/>
+  <link href="css/froala_editor.min.css" rel="stylesheet" type="text/css">
+  <link href="css/froala_page.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.4.6.0.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+<div class="container">
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+      <div class="accordion-heading outline">
+        <a class="accordion-toggle " data-toggle="collapse" href="#collapseOne">
+          外呼任务
+        </a>
+      </div>
+      <div id="collapseOne" class="accordion-body collapse in">
+        <div class="accordion-inner waitfinish">
+          <a class="" href="#waitfinish" data-toggle="tab">待完成任务</a>
+          <div class="icon_num">0</div>
+        </div>
+        <div class="accordion-inner onlinefinish">
+          <a class="" href="#inline" data-toggle="tab">执行中任务</a>
+          <div class="icon_num">0</div>
+        </div>
+        <div class="accordion-inner finished">
+          <a class="" href="#finish" data-toggle="tab">已完成任务</a>
+          <div class="icon_y">√</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-group">
+      <div class="accordion-heading outline_pz">
+        <a class="accordion-toggle " data-toggle="collapse"  href="#collapseTwo">
+          外呼任务配置
+        </a>
+      </div>
+      <div id="collapseTwo" class="accordion-body collapse in">
+        <div class="accordion-inner outonlinelist">
+          <a class="" href="#outlineset" data-toggle="tab">外呼任务管理</a>
+        </div>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+        <!--暂时隐藏-->
+        <!--<div class="accordion-inner outlinemuban">
+          <a class="" href="#outlinemange" data-toggle="tab">外呼模板管理</a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <div class="right_padding">
+    <div class="righttable">
+      <div class="ul_style">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active waitfinish_later">
+            <a data-toggle="tab" href="#waitfinish" class="left_a">
+              待完成任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="onlinefinish_later">
+            <a data-toggle="tab" href="#inline" class="left_a">
+              执行中任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="finished_later" >
+            <a data-toggle="tab" href="#finish" class="left_a">
+              已完成任务
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="outonlinelist_later" >
+            <a data-toggle="tab"  href="#outlineset" class="left_a">
+              外呼任务管理
+            </a>
+            <a class="right_a">X</a>
+          </li>
+          <li class="outlinemuban_later" >
+            <a data-toggle="tab" href="#outlinemange" class="left_a">
+              外呼模板管理
+            </a>
+            <a class="right_a">X</a>
+          </li>
+        </ul>
+      </div>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="waitfinish">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered table-responsive">
+              <thead>
+              <tr class="color_gary">
+                <th>编号</th>
+                <th>任务名称</th>
+                <th>任务模板</th>
+                <th>任务类型</th>
+                <th>任务执行时间</th>
+                <th class="handle_finish">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>123</td>
+                <td>任务一</td>
+                <td>模板一</td>
+                <td>类型一</td>
+                <td>2018.6.6</td>
+                <td>
+                  <img class="look_list_wait" src="img/list.png" alt="">
+                  <img class="edit_list_w" src="img/edit.png" alt="">
+                  <img class="remove_list_wait" src="img/close.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="inline">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered  table-responsive">
+              <thead>
+              <tr class="color_gary">
+                <th>编号</th>
+                <th>任务名称</th>
+                <th>任务模板</th>
+                <th>任务类型</th>
+                <th>任务执行时间</th>
+                <th class="handle_finish">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <img class="look_list_wait margin_wait" src="img/list.png" alt="">
+                  <img class="remove_list_wait" src="img/stop.png" alt="">
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="finish">
+          <div class="wait_border">
+            <select class="form-control select-time">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <span class="num-protext">任务编号</span>
+            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+            <input class="search-btn" type="button" value="搜索"/>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered table-responsive ">
+              <thead>
+              <tr class="color_gary">
+                <th>编号</th>
+                <th>任务名称</th>
+                <th>任务模板</th>
+                <th>任务类型</th>
+                <th>任务执行时间</th>
+                <th class="handle_finish">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <input class="look_list_finish" type="button" value="查看" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="outlineset">
+          <div class="wait_border">
+            <input class="form-control ipt-outline" type="text" placeholder="任务名称"/>
+            <input class="form-control ipt-text" type="text" placeholder="话术模板ID"/>
+            <select class="form-control select-time3">
+              <option selected>不限时间</option>
+              <option selected>一个小时</option>
+            </select>
+            <input class="search-btn " type="button" value="搜索"/>
+          </div>
+          <div class="addpro">
+            <input class="newaddpro" type="button" value="新增外呼任务"/>
+            <input class="newaddproai" type="button" value="新增智能外呼任务"/>
+            <select class="page">
+              <option>20条/页</option>
+            </select>
+            <!-- 分页-->
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+          <div class="table_border">
+            <table class="table  table-bordered  table-responsive">
+              <thead>
+              <tr class="color_gary">
+                <th>外呼任务名称</th>
+                <th>任务类型</th>
+                <th>话术模板</th>
+                <th>外呼记录模板</th>
+                <th>热线队列</th>
+                <th>状态</th>
+                <th>生效日期</th>
+                <th>失效日期</th>
+                <th class="handle_finish">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <img class="img_add" src="img/addman.png"/>
+                  <img class="img_edit" src="img/edit.png"/>
+                  <img class="img_stop" src="img/stop.png"/>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="outlinemange">
+          <input class="newmuban" type="button" value="新增营销模板"/>
+          <input class="newoutphonelist" type="button" value="新增外呼记录"/>
+          <div class="table_border">
+            <table class="table   table-bordered table-responsive table_loca">
+
+              <thead>
+              <tr class="color_gary">
+                <th>模板名称</th>
+                <th>模板类型</th>
+                <th class="handle">操作</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <input class="look_list" type="button" value="查看" />
+                  <input class="edit_list" type="button" value="编辑" />
+                  <input class="remove_list" type="button" value="删除" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--遮罩层-->
+<div id="loading">
+  <!--新增外呼任务-->
+  <div id="newaddout">
+    <div class="addproaimange">
+      <span class="addproaimange_text">新增外呼任务</span>
+      <div class="close close_outphone">X</div>
+      <div class="padding_addpro">
+        <div class="padding_top">
+          <span class="outlin_text">外呼任务名称</span>
+          <input class="outlin_ipt_out form-control" type="text" placeholder="20个字以内"/>
+        </div>
+        <div class="padding_top">
+          <span class="outlin_text">任务类型:</span>
+          <select class="">
+            <option value="">请选择</option>
+            <option value="">人工外呼</option>
+            <option value="">预测式外呼</option>
+            <option value="">预览式外呼</option>
+          </select>
+        </div>
+        <div class="mange_time">
+          <span class="outlin_text">任务有效期:</span>
+          <input id="time_begin_out" class="time_begin form-control form_datetime" type="text"/>
+          <img class="img_date img_left" src="img/data.png">
+          <!--暂时只要一个时间-->
+          <!--<input id="time_end_out" class="time_end form-control" type="text"/>
+          <img class="img_date img_right" src="img/data.png">-->
+        </div>
+        <div class="asktimemange">
+          <span class="outlin_text">呼叫时间设置</span>
+          <input class="btn_new_out" type="button" value="新增"/>
+          <table class="table table-bordered   tb-way">
+            <thead>
+            <tr class="color_gary">
+              <th>开始时间</th>
+              <th>结束时间</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="phonerate">
+          <span class="outlin_text">客户未接听最多可拨打频次</span>
+          <input class="num_rate" type="number" value="3"/>
+          <span class="outlin_text">同一客户外呼间隔时长</span>
+          <input class="num_minute" type="number" value="30"/>
+          <span>分钟</span>
+        </div>
+        <div class="outphone">
+          <span class="outlin_text">热线队列:</span>
+          <select class="sel_list">
+            <option value="" selected>请选择</option>
+            <option value="">外呼1组</option>
+            <option value="">外呼2组</option>
+            <option value="">外呼3组</option>
+          </select>
+        </div>
+        <div class="outphone">
+          <span class="outlin_text">话术模板</span>
+          <select class="sel_list">
+            <option value="">条目一</option>
+            <option value="">条目二</option>
+            <option value="">条目三</option>
+            <option value="">条目四</option>
+          </select>
+        </div>
+        <div class="outphone">
+          <span class="outlin_text">外呼记录模板</span>
+          <select class="sel_list">
+            <option value="">条目一</option>
+            <option value="">条目二</option>
+            <option value="">条目三</option>
+            <option value="">条目四</option>
+          </select>
+        </div>
+        <div class="addprobtn">
+          <input class="ipt_ready_outphone" type="button" value="确定"/>
+          <input class="ipt_cancel_outphone" type="button" value="取消"/>
+        </div>
+      </div>
+      <!--新增外呼任务时间设置-->
+      <div class="add_time_out">
+        <div class="top_gray">
+          <span class="addproaimange_text">新增呼叫时段</span>
+          <div class="close close_in_out">X</div>
+        </div>
+        <div class="content">
+          <div class="content_div">
+            <span class="time_text">开始时间</span>
+            <input id="begin_time_out" class="begin_time_in" type="text"/>
+            <img class="datapng" src="img/data.png"/>
+            <span class="time_text">结束时间</span>
+            <input id="end_time_out" class="begin_time_in" type="text"/>
+            <img class="datapng" src="img/data.png"/>
+          </div>
+          <div class="addprobtn_in">
+            <input class="ipt_ready_out" type="button" value="确定"/>
+            <input class="ipt_cancel_out" type="button" value="取消"/>
+          </div>
+        </div>
+        <div class="addpro_foot">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--新增智能外呼任务-->
+  <div id="newaddproai">
+    <div class="addproaimange">
+      <span class="addproaimange_text">新增智能外呼任务</span>
+      <div class="close close_out">X</div>
+      <div class="padding_addpro">
+        <div class="padding_top">
+          <span class="outlin_text">外呼任务名称</span>
+          <input class="outlin_ipt form-control" type="text" placeholder="20个字以内"/>
+        </div>
+        <div class="mange_time">
+          <span class="outlin_text">任务有效期: </span>
+          <input id="time_begin" class="time_begin form-control form_datetime" type="text"/>
+          <img class="img_date img_left" src="img/data.png">
+          <!--暂时只要一个时间-->
+          <!--<input id="time_end" class="time_end form-control" type="text"/>
+          <img class="img_date img_right" src="img/data.png">-->
+        </div>
+        <div class="asktimemange">
+          <span class="outlin_text">呼叫时间设置</span>
+          <input class="btn_new" type="button" value="新增"/>
+          <table class="table table-bordered   tb-way">
+            <thead>
+            <tr class="color_gary">
+              <th>开始时间</th>
+              <th>结束时间</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="phonerate">
+          <span class="outlin_text">客户未接听最多可拨打频次</span>
+          <input class="num_rate" type="number" value="3"/>
+          <span class="outlin_text">同一客户外呼间隔时长</span>
+          <input class="num_minute" type="number" value="30"/>
+          <span>分钟</span>
+        </div>
+        <div class="outphone">
+          <span class="outlin_text">外呼流程模板</span>
+          <select class="sel_list">
+            <option value="">条目一</option>
+            <option value="">条目二</option>
+            <option value="">条目三</option>
+            <option value="">条目四</option>
+          </select>
+        </div>
+        <div class="outlinemange">
+          <span class="outlin_text">呼叫客户名单设置</span>
+          <input class="ipt_outlist" type="button" value="导入/导出客户清单"/>
+          <table class="table table-bordered   tb-way">
+            <thead>
+            <tr class="color_gary">
+              <th>客户名</th>
+              <th>客户电话</th>
+              <th>客户类型</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="addprobtn">
+          <input class="ipt_ready" type="button" value="确定"/>
+          <input class="ipt_cancel" type="button" value="取消"/>
+        </div>
+      </div>
+      <div class="addpro_foot">
+      </div>
+    </div>
+    <!--新增呼叫时间设置-->
+    <div class="add_time">
+      <div class="top_gray">
+        <span class="addproaimange_text">新增呼叫时段</span>
+        <div class="close close_in">X</div>
+      </div>
+      <div class="content">
+        <div class="content_div">
+          <span class="time_text">开始时间</span>
+          <input id="begin_time_in" class="begin_time_in" type="text"/>
+          <img class="datapng" src="img/data.png"/>
+          <span class="time_text">结束时间</span>
+          <input id="end_time_in" class="begin_time_in" type="text"/>
+          <img class="datapng" src="img/data.png"/>
+        </div>
+        <div class="addprobtn_in">
+          <input class="ipt_ready_in" type="button" value="确定"/>
+          <input class="ipt_cancel_in" type="button" value="取消"/>
+        </div>
+
+      </div>
+      <div class="addpro_foot">
+      </div>
+    </div>
+  </div>
+  <!--导入导出客户清单-->
+  <div class="inonerlist">
+    <div class="top_gray">
+      <span class="addproaimange_text">新增呼叫时段</span>
+      <div class="close close_outlong close_two">X</div>
+    </div>
+    <div class="inonerlist_content">
+      <div class="content_oner">
+        <input class="ipt_oner" type="text" placeholder="输入客户编号..." />
+        <input class="ipt_oner" type="text" placeholder="输入客户号码..." />
+        <select class="sel_oner">
+          <option value="">选择客户类型</option>
+          <option value="">新客户</option>
+          <option value="">VIP客户</option>
+        </select>
+        <input class="search_oner" type="button" value="搜索" />
+      </div>
+      <div class="inlist">
+        <input class="inlist_ipt" id="ulList" type="text" placeholder="导入客户清单..." />
+        <img class="inlist_img" src="img/pro.png"/>
+        <input class="btn_in" id="fUpload" type="file" value="导入" style="opacity: 0;"/>
+        <input class="btn_in_d"  type="button" value="导入" style="" />
+        <input class="btn_list_down" type="button" value="导人模板下载" />
+        <input class="btn_list" type="button" value="导出列表" />
+        <input class="add_man" type="button" value="增加客户" />
+      </div>
+      <table class="table table-bordered table-responsive  tb-way">
+        <thead>
+        <tr class="color_gary">
+          <th>编号</th>
+          <th>客户号</th>
+          <th>客户姓名</th>
+          <th>客户号码</th>
+          <th>客户类型</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+      <select class="page">
+        <option>20条/页</option>
+      </select>
+      <!-- 分页-->
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+    <div class="addprobtn_in_list">
+      <input class="ipt_ready_long" type="button" value="确定"/>
+      <input class="ipt_cancel_long" type="button" value="取消"/>
+    </div>
+    <div class="addpro_foot">
+    </div>
+  </div>
+  <!--增加客户-->
+  <div class="add_manlist">
+    <div class="top_gray">
+      <span class="addproaimange_text">增加客户名单</span>
+      <div class="close close_addman">X</div>
+    </div>
+    <div class="content">
+      <div class="content_div">
+        <div class="addman_div">
+          <span class="time_text">客户姓名</span>
+          <input type="text" />
+          <span>*</span>
+        </div>
+        <div class="addman_div">
+          <span class="time_text">客户号码</span>
+          <input type="text" />
+          <span>*</span>
+        </div>
+        <div class="addman_div">
+          <span class="time_text">客户类型</span>
+          <select class="">
+            <option value="" selected>请选择客户类型</option>
+            <option value="">类型一</option>
+            <option value="">类型二</option>
+            <option value="">类型三</option>
+          </select>
+        </div>
+        <div class="addman_div">
+          <span class="time_text">备注:</span>
+          <textarea class="textarea_info"></textarea>
+        </div>
+      </div>
+      <div class="addprobtn_addman">
+        <input class="ipt_ready_addman" type="button" value="确定"/>
+        <input class="ipt_cancel_addman" type="button" value="取消"/>
+      </div>
+    </div>
+    <div class="addpro_foot">
+    </div>
+  </div>
+  <!--新增营销模板-->
+  <div class="add_sellmuban">
+    <div class="top_gray">
+      <span class="addproaimange_text">新增营销模板</span>
+      <div class="close close_addsell">X</div>
+    </div>
+    <div class="content">
+      <div class="content_div">
+        <span class="time_text">营销主题</span>
+        <input class="sell_tle" type="text" placeholder="20个字以内" />
+        <span class="time_text">营销脚本</span>
+        <!--<textarea class="textarea_sell"></textarea>-->
+        <section id="editor">
+          <div id='edit'>
+          </div>
+        </section>
+
+      </div>
+      <div class="addprobtn_addsell">
+        <input class="ipt_ready_addsell" type="button" value="确定"/>
+        <input class="ipt_cancel_addsell" type="button" value="取消"/>
+      </div>
+    </div>
+    <div class="addpro_foot">
+    </div>
+  </div>
+  <!--新增外呼记录-->
+  <div class="add_outlist">
+    <div class="top_gray">
+      <span class="addproaimange_text">新增外呼记录</span>
+      <div class="close close_outlist">X</div>
+    </div>
+    <div class="content">
+      <div class="content_div">
+        <span class="top_text">近期是否有投资需求</span>
+        <input class="check_style choice_left" type="radio" name="tz" value="有" checked>
+        <span class="choice ">有</span>
+        <input class="check_style" type="radio" name="tz" value="没有">
+        <span class="choice">没有</span>
+        <span class="top_text">感兴趣的投资方向</span>
+        <input class="check_style choice_left" type="radio" name="aspect" value="长期投资" checked>
+        <span class="choice">长期投资</span>
+        <input class="check_style" type="radio" name="aspect" value="短期投资">
+        <span class="choice">短期投资</span>
+        <span class="top_text">是否已下载手机银行</span>
+        <input class="check_style choice_left" type="radio" name="yon" value="已下载" checked>
+        <span class="choice">已下载</span>
+        <input class="check_style" type="radio" name="yon" value="未下载">
+        <span class="choice">未下载</span>
+        <span class="top_text">其它</span>
+        <textarea class="textarea_other"></textarea>
+      </div>
+      <div class="addprobtn_addoutlist">
+        <input class="ipt_ready_addoutlist" type="button" value="确定"/>
+        <input class="ipt_cancel_addoutlist" type="button" value="取消"/>
+      </div>
+    </div>
+    <div class="addpro_foot">
+    </div>
+  </div>
+  <!--任务清单 待完成 执行中-->
+  <div class="add_listonline">
+    <div class="top_gray">
+      <span class="addproaimange_text">任务清单</span>
+      <div class="close close_list_online">X</div>
+    </div>
+    <div class="content">
+      <div class="content_div">
+        <div class="three_list">
+          <span class="list_text">任务编号:</span>
+          <span class="list_num"></span>
+          <span class="list_text">任务名称:</span>
+          <span class="list_name"></span>
+          <span class="list_text">任务类型:</span>
+          <span class="list_style"></span>
+        </div>
+        <input class="form-control ipt-outline" type="text" placeholder="输入关键字"/>
+        <select class="form-control select-time3">
+          <option selected>选择客户类型</option>
+          <option>类型一</option>
+          <option>类型二</option>
+          <option>类型三</option>
+        </select>
+        <select class="form-control select-time3">
+          <option selected>选择外呼结果</option>
+          <option>已接听</option>
+          <option>未接听</option>
+          <option>待回呼</option>
+          <option>挂断</option>
+        </select>
+        <input class="search-list" type="button" value="搜索"/>
+        <table class="table  table-bordered  table-responsive">
+          <thead>
+          <tr class="color_gary">
+            <th>编号</th>
+            <th>客户姓名</th>
+            <th>电话号码</th>
+            <th>客户类型</th>
+            <th>执行时间</th>
+            <th>外呼结果</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <select class="page">
+          <option>20条/页</option>
+        </select>
+        <!-- 分页-->
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="addprobtn_addoutlist">
+        <input class="ipt_cancel_list" type="button" value="关闭"/>
+      </div>
+    </div>
+    <div class="addpro_foot">
+    </div>
+  </div>
+  <!--任务清单已完成-->
+  <div class="add_list">
+    <div class="top_gray">
+      <span class="addproaimange_text">任务清单</span>
+      <div class="close close_list_finish">X</div>
+    </div>
+    <div class="content">
+      <div class="content_div">
+        <div class="three_list">
+          <span class="list_text">任务编号:</span>
+          <span class="list_num"></span>
+          <span class="list_text">任务名称:</span>
+          <span class="list_name"></span>
+          <span class="list_text">任务类型:</span>
+          <span class="list_style"></span>
+        </div>
+
+        <input class="form-control ipt-outline" type="text" placeholder="输入关键字"/>
+        <select class="form-control select-time3">
+          <option selected>选择客户类型</option>
+          <option>类型一</option>
+          <option>类型二</option>
+          <option>类型三</option>
+        </select>
+        <select class="form-control select-time3">
+          <option selected>选择外呼结果</option>
+          <option>已接听</option>
+          <option>未接听</option>
+          <option>待回呼</option>
+          <option>挂断</option>
+        </select>
+        <input class="search-list" type="button" value="搜索"/>
+        <table class="table  table-bordered  table-responsive">
+          <thead>
+          <tr class="color_gary">
+            <th>编号</th>
+            <th>客户姓名</th>
+            <th>电话号码</th>
+            <th>客户类型</th>
+            <th>执行时间</th>
+            <th>外呼结果</th>
+            <th class="handle_finish_play">操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <img class="play" src="img/play.png" alt="播放">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <select class="page">
+          <option>20条/页</option>
+        </select>
+        <!-- 分页-->
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="addprobtn_addoutlist">
+        <input class="ipt_cancel_list_fin" type="button" value="关闭"/>
+      </div>
+    </div>
+    <div class="addpro_foot">
+    </div>
+    <!--交互记录-->
+    <div class="add_list_play">
+      <div class="top_gray">
+        <span class="addproaimange_text">交互记录</span>
+        <div class="close close_play">X</div>
+      </div>
+      <div class="content">
+        <div class="content_div">
+          <audio  class="play_mic" id="audio" controls src="img/123.mp3"></audio>
+          <div class="play_dialogue">
+          </div>
+        </div>
+      </div>
+      <div class="addpro_foot">
+      </div>
+    </div>
+  </div>
+</div>
 </body>
-
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/treelist.js"></script>
+<script src="js/time.js"></script>
+<!--文本编辑器-->
+<script src="js/plugins/froala_editor.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/plugins/froala_editor_ie8.min.js"></script>
+<![endif]-->
+<script src="js/plugins/tables.min.js"></script>
+<script src="js/plugins/lists.min.js"></script>
+<script src="js/plugins/colors.min.js"></script>
+<script src="js/plugins/media_manager.min.js"></script>
+<script src="js/plugins/font_family.min.js"></script>
+<script src="js/plugins/font_size.min.js"></script>
+<script src="js/plugins/block_styles.min.js"></script>
+<script>
+  $(function(){
+    $('#edit').editable({inlineMode: false, alwaysBlank: true})
+  });
+</script>
 </html>
