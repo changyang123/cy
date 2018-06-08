@@ -10,7 +10,7 @@ $(function () {
   formatTime();
   $("#time_begin ,#time_end").val(timestr);
   $("#time_begin_out ,#time_end_out").val(timestr);
-  $("#begin_time_in ,#end_time_in").val(timestr);
+  $("#begin_time_in ,#end_time_in").val(timesettingday($("#begin_time_in").val(timestr)));
   $("#begin_time_out ,#end_time_out").val(timestr);
   $("#time_begin_out").focus(function () {
     $("#time_begin_out").val(timestr);
@@ -38,8 +38,8 @@ $(function () {
   })
   timesetting($("#time_begin").val(timestr));
   timesetting($("#time_end").val(timestr));
-  timesetting($("#begin_time_in").val(timestr));
-  timesetting($("#end_time_in").val(timestr));
+  timesettingday($("#begin_time_in").val(timestr));
+  timesettingday($("#end_time_in").val(timestr));
 
   timesetting($("#time_begin_out").val(timestr));
   timesetting($("#time_end_out").val(timestr));

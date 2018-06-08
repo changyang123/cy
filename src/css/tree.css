@@ -1,23 +1,24 @@
 .container{
   width:100%;
   min-width: 900px;
-  height: auto;
+  height: 768px;
   float: left;
  }
 .accordion {
-  width:15%;
-  height: 580px;
+  width:250px;
+  height: 768px;
   float: left;
+  background: #1e5598;
 }
 .right_padding{
   width: 85%;
   float: left;
-  height: 580px;
+  height: 768px;
   background: #F0f3fa;
 }
 .righttable{
   width: 98%;
-  height: 570px;
+  height: 768px;
   float: left;
   margin-top: 10px;
   margin-left: 10px;
@@ -225,6 +226,12 @@
   font-size:18px;
 }
 .addproaimange_text{
+  float: left;
+  margin-left: 10px;
+  line-height: 30px;
+  width: 92%;
+}
+.addproaimange_text_1{
   float: left;
   margin-left: 10px;
   line-height: 30px;
@@ -867,7 +874,7 @@
   margin-left: 30px !important;
 }
 .cor{
-  background-color: #41c7db !important;
+  background-color: #4381e6 !important;
 }
 tr:nth-child(even){
   background: #eeeeee;
@@ -912,9 +919,9 @@ tr:nth-child(even){
 }
 .ul_style{
   width: 100%;
-  height: 38px;
+  height: 40px;
   float: left;
-  border: 1px solid #333333;
+  border-bottom: 2px solid #4381e6;
 }
 #myTabContent{
   width: 100%;
@@ -933,10 +940,15 @@ tr:nth-child(even){
 }
 .left_a{
   float: left;
+  padding-top: 12px !important;
+  color: #333333;
+  border-top-left-radius: 5px;
 }
 .right_a{
   float: left;
-  padding: 8px 5px 8px 5px !important;
+  padding: 12px 5px 8px 5px !important;
+  color: #FFFFFF;
+  border-top-right-radius: 5px;
 }
 #editor{
   float: left;
@@ -947,6 +959,12 @@ tr:nth-child(even){
 }
 .waitfinish ,.onlinefinish ,.finished ,.outonlinelist ,.outlinemuban{
   cursor: pointer;
+  padding: 15px 30px;
+}
+.font_sm{
+  margin-left: 20px;
+  font-size: 16px;
+  color: #FFFFFF;
 }
 .nav-tabs>li>a, .nav-pills>li>a{
   margin-right: 0 !important;
@@ -971,4 +989,12 @@ tr:nth-child(even){
   text-align: center;
   font-size: 18px;
   color: #20ff5c;
+}
+.font_big{
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 15px 25px !important;
+}
+.accordion-toggle {
+  background: #0c397c;
 }
