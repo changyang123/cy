@@ -16,8 +16,9 @@
   <div class="accordion" id="accordion2">
     <div class="accordion-group">
       <div class="accordion-heading outline">
+
         <a class="accordion-toggle font_big" data-toggle="collapse" href="#collapseOne">
-          外呼任务
+          <img class="icon_left" src="../src/img/rwzx.png" />外呼任务
         </a>
       </div>
       <div id="collapseOne" class="accordion-body collapse in">
@@ -38,7 +39,7 @@
     <div class="accordion-group">
       <div class="accordion-heading outline_pz">
         <a class="accordion-toggle font_big" data-toggle="collapse"  href="#collapseTwo">
-          外呼任务配置
+          <img class="icon_left" src="../src/img/rwgl.png" />外呼任务配置
         </a>
       </div>
       <div id="collapseTwo" class="accordion-body collapse in">
@@ -93,14 +94,18 @@
       <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="waitfinish">
           <div class="wait_border">
-            <select class="form-control select-time">
-              <option selected>不限时间</option>
-              <option selected>一个小时</option>
-            </select>
-            <span class="num-protext">任务编号</span>
-            <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
-            <input class="search-btn" type="button" value="搜索"/>
+            <div class="inmid_content">
+              <select class="form-control select-time">
+                <option selected>不限时间</option>
+                <option selected>一个小时</option>
+              </select>
+              <span class="num-protext">任务编号</span>
+              <input class="form-control ipt-text" type="text" placeholder="输入关键字"/>
+              <img class="search-icon" src="../src/img/search_icon.png"/>
+              <input class="search-btn" type="button" value="搜索"/>
+            </div>
           </div>
+          <div class="line_bg"></div>
           <div class="table_border">
             <table class="table  table-bordered table-responsive">
             <thead>
