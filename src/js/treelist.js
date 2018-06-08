@@ -71,18 +71,26 @@ $(function () {
   })
 
   /*新增智能外呼任务*/
-  $(".newaddproai ,.edit_list_w").on("click",function () {
+  $(".newaddproai").on("click",function () {
     $("#loading").fadeIn();
     $("#newaddproai").fadeIn();
+
+  })
+  $(".edit_list_w").on("click",function () {
+    $("#loading").fadeIn();
+    $("#newaddproai").fadeIn();
+    $(".addproaimange_text").html("修改智能外呼任务");
   })
   $(".close_out ,.ipt_cancel").on("click",function () {
     if($('.add_time').is(':hidden')){
       $("#loading").fadeOut();
       $("#newaddproai").fadeOut();
+      $(".addproaimange_text").html("新增智能外呼任务");
     }else{
       $('.add_time').fadeOut()
       $("#loading").fadeOut();
       $("#newaddproai").fadeOut();
+      $(".addproaimange_text").html("新增智能外呼任务");
     }
 
 
@@ -206,6 +214,7 @@ $(function () {
   $(".img_edit").on("click",function () {
     $("#newaddproai").fadeIn();
     $("#loading").fadeIn();
+    $(".addproaimange_text").html("修改智能外呼任务");
   })
   $(".close_outlong ,.ipt_cancel_long").on("click",function () {
     if($('.add_manlist').is(':hidden')){
@@ -214,8 +223,10 @@ $(function () {
     }else{
       $('.inonerlist').fadeOut()
       $('.add_manlist').fadeOut()
-
     }
+  })
+  $(".close_two").on("click",function () {
+    $(".inonerlist").fadeOut();
   })
   /*tab切换交互*/
   $(".right_a").on("click",function () {
@@ -298,7 +309,27 @@ $(function () {
     });
   // 最初运行函数
   $(window).resize();
+  /*right_padding 宽度*/
+  $(".right_padding").width($(window).width()-$(".accordion").width());
 
 })
-
+/*调用接口*/
+function aaa() {
+  var data = {
+    tenantid:1
+  }
+  console.log(data);
+  $.ajax({
+    async : true,
+    url : "https://cc.egoonet.com:9099/v1/faq/classes/1",
+    type : "GET",
+    dataType : "jsonp", // 返回的数据类型，设置为JSONP方式
+    jsonp : 'callback', //指定一个查询参数名称来覆盖默认的 jsonp 回调参数名 callback
+    jsonpCallback: 'handleResponse', //设置回调函数名
+    data :data,
+    success: function(jsonp){
+      console.log(jsonp);
+    }
+  });
+}
 
