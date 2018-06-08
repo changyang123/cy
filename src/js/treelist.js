@@ -53,8 +53,14 @@ $(function () {
     $("#newaddout").fadeIn();
   })
   $(".close_outphone ,.ipt_cancel_outphone").on("click",function () {
-    $("#loading").fadeOut();
-    $("#newaddout").fadeOut();
+    if($('.add_time_out').is(':hidden')){
+      $("#loading").fadeOut();
+      $("#newaddout").fadeOut();
+    }else{
+      $('.add_time_out').fadeOut()
+      $("#loading").fadeOut();
+      $("#newaddout").fadeOut();
+    }
   })
   /*新增呼叫时间设置*/
   $(".btn_new_out").on("click",function () {
@@ -70,8 +76,16 @@ $(function () {
     $("#newaddproai").fadeIn();
   })
   $(".close_out ,.ipt_cancel").on("click",function () {
-    $("#loading").fadeOut();
-    $("#newaddproai").fadeOut();
+    if($('.add_time').is(':hidden')){
+      $("#loading").fadeOut();
+      $("#newaddproai").fadeOut();
+    }else{
+      $('.add_time').fadeOut()
+      $("#loading").fadeOut();
+      $("#newaddproai").fadeOut();
+    }
+
+
   })
   /*新增呼叫时间设置*/
   $(".btn_new").on("click",function () {
@@ -83,9 +97,6 @@ $(function () {
   /*导入导出客户清单*/
   $(".ipt_outlist").on("click",function () {
     $(".inonerlist").fadeIn();
-  })
-  $(".ipt_cancel_long ,.close_outlong").on("click",function () {
-    $(".inonerlist").fadeOut();
   })
   /*增加客户窗口*/
   $(".add_man").on("click",function () {
@@ -159,8 +170,14 @@ $(function () {
     $(".add_list").fadeIn();
   })
   $(".close_list_finish ,.ipt_cancel_list_fin").on("click",function () {
-    $(".add_list").fadeOut();
-    $("#loading").fadeOut();
+    if($('.add_list_play').is(':hidden')){
+      $(".add_list").fadeOut();
+      $("#loading").fadeOut();
+    }else{
+      $('.add_list_play').fadeOut()
+      $(".add_list").fadeOut();
+      $("#loading").fadeOut();
+    }
   })
   /*任务清单 待完成 执行中*/
   $(".look_list_wait").on("click",function () {
@@ -190,13 +207,14 @@ $(function () {
     $("#newaddproai").fadeIn();
     $("#loading").fadeIn();
   })
-  $(".close_two ,.ipt_cancel_long").on("click",function () {
-    if($('#newaddproai').is(':hidden')){
+  $(".close_outlong ,.ipt_cancel_long").on("click",function () {
+    if($('.add_manlist').is(':hidden')){
       $(".inonerlist").fadeOut();
-      $("#loading").fadeOut();
+      $(".add_manlist").fadeOut();
     }else{
-      $('#newaddproai').fadeIn()
-      $("#loading").fadeIn();
+      $('.inonerlist').fadeOut()
+      $('.add_manlist').fadeOut()
+
     }
   })
   /*tab切换交互*/
