@@ -566,14 +566,13 @@
   float:left;
   margin-left: 5px;
   margin-top: 5px;
+  cursor: pointer !important;
 }
 .btn_in{
-  width:52px !important;
-  height: 30px;
-  line-height: 24px;
+  width:35px !important;
   float: left;
-  margin-left: 3px;
-  margin-right: 17px;
+  margin-left: -30px;
+  margin-right: 10px;
   background: #fff;
   outline: none;
   -webkit-border-radius: 3px;
@@ -589,8 +588,7 @@
   line-height: 24px;
   float: left;
   color: #FFFFFF;
-  margin-left:-70px;
-  margin-right: 17px;
+  margin-right: 10px;
   background: #b7b7b7;
   outline: none;
   border: none;
@@ -635,17 +633,17 @@
 }
 .add_dr{
   float: left;
-  margin-left: -73px;
+  margin-left: -67px;
   margin-top: 9px;
 }
 .add_dc{
   float: left;
-  margin-left: -84px;
+  margin-left: -85px;
   margin-top: 9px;
 }
 .add_dn{
   float: left;
-  margin-left: -121px;
+  margin-left: -122px;
   margin-top: 9px;
 }
 .addman_div{
