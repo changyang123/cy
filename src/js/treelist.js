@@ -92,7 +92,14 @@ $(function () {
       $("#newaddproai").fadeOut();
       $(".addproaimange_text").html("新增智能外呼任务");
     }
-
+    if($('.inonerlist').is(':hidden')){
+      $("#loading").fadeOut();
+      $("#newaddproai").fadeOut();
+    }else{
+      $('.inonerlist').fadeOut()
+      $("#loading").fadeOut();
+      $("#newaddproai").fadeOut();
+    }
 
   })
   /*新增呼叫时间设置*/
@@ -105,6 +112,7 @@ $(function () {
   /*导入导出客户清单*/
   $(".ipt_outlist").on("click",function () {
     $(".inonerlist").fadeIn();
+
   })
   /*增加客户窗口*/
   $(".add_man").on("click",function () {
@@ -226,7 +234,14 @@ $(function () {
     }
   })
   $(".close_two").on("click",function () {
-    $(".inonerlist").fadeOut();
+    if($('#newaddproai').is(':hidden')){
+      $(".inonerlist").fadeOut();
+      $("#loading").fadeOut();
+    }else{
+      $(".inonerlist").fadeOut();
+      $("#loading").fadeIn();
+      $("#newaddproai").fadeIn();
+    }
   })
   /*tab切换交互*/
   $(".right_a").on("click",function () {
