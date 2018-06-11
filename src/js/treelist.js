@@ -48,11 +48,11 @@ $(function () {
 
   $('#edit').editable({inlineMode: false, alwaysBlank: true})
   /*新增外呼任务*/
-  $(".newaddpro").on("click",function () {
+  $(".newaddpro").click(function () {
     $("#loading").fadeIn();
     $("#newaddout").fadeIn();
   })
-  $(".close_outphone ,.ipt_cancel_outphone").on("click",function () {
+  $(".close_outphone ,.ipt_cancel_outphone").click(function () {
     if($('.add_time_out').is(':hidden')){
       $("#loading").fadeOut();
       $("#newaddout").fadeOut();
@@ -63,25 +63,25 @@ $(function () {
     }
   })
   /*新增呼叫时间设置*/
-  $(".btn_new_out").on("click",function () {
+  $(".btn_new_out").click(function () {
     $(".add_time_out").fadeIn();
   })
-  $(".close_in_out ,.ipt_cancel_out").on("click",function () {
+  $(".close_in_out ,.ipt_cancel_out").click(function () {
     $(".add_time_out").fadeOut();
   })
 
   /*新增智能外呼任务*/
-  $(".newaddproai").on("click",function () {
+  $(".newaddproai").click(function () {
     $("#loading").fadeIn();
     $("#newaddproai").fadeIn();
 
   })
-  $(".edit_list_w").on("click",function () {
+  $(".edit_list_w").click(function () {
     $("#loading").fadeIn();
     $("#newaddproai").fadeIn();
     $(".addproaimange_text").html("修改智能外呼任务");
   })
-  $(".close_out ,.ipt_cancel").on("click",function () {
+  $(".close_out ,.ipt_cancel").click(function () {
     if($('.add_time').is(':hidden')){
       $("#loading").fadeOut();
       $("#newaddproai").fadeOut();
@@ -103,89 +103,89 @@ $(function () {
 
   })
   /*新增呼叫时间设置*/
-  $(".btn_new").on("click",function () {
+  $(".btn_new").click(function () {
     $(".add_time").fadeIn();
   })
-  $(".close_in ,.ipt_cancel_in").on("click",function () {
+  $(".close_in ,.ipt_cancel_in").click(function () {
     $(".add_time").fadeOut();
   })
   /*导入导出客户清单*/
-  $(".ipt_outlist").on("click",function () {
+  $(".ipt_outlist").click(function () {
     $(".inonerlist").fadeIn();
 
   })
   /*增加客户窗口*/
-  $(".add_man").on("click",function () {
+  $(".add_man").click(function () {
     $(".add_manlist").fadeIn();
   })
-  $(".close_addman ,.ipt_cancel_addman").on("click",function () {
+  $(".close_addman ,.ipt_cancel_addman").click(function () {
     $(".add_manlist").fadeOut();
   })
   /*新增营销模板*/
-  $(".newmuban").on("click",function () {
+  $(".newmuban").click(function () {
     $("#loading").fadeIn();
     $(".add_sellmuban").fadeIn();
   })
-  $(".close_addsell ,.ipt_cancel_addsell").on("click",function () {
+  $(".close_addsell ,.ipt_cancel_addsell").click(function () {
     $(".add_sellmuban").fadeOut();
     $("#loading").fadeOut();
   })
   /*新增外呼记录*/
-  $(".close_outlist ,.ipt_cancel_addoutlist").on("click",function () {
+  $(".close_outlist ,.ipt_cancel_addoutlist").click(function () {
     $(".add_outlist").fadeOut();
     $("#loading").fadeOut();
   })
-  $(".newoutphonelist ,.look_list ,.edit_list").on("click",function () {
+  $(".newoutphonelist ,.look_list ,.edit_list").click(function () {
     $("#loading").fadeIn();
     $(".add_outlist").fadeIn();
   })
   /*tab切换*/
-  $(".waitfinish").on("click",function () {
+  $(".waitfinish").click(function () {
     $(".waitfinish_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
-  $(".onlinefinish").on("click",function () {
+  $(".onlinefinish").click(function () {
     $(".onlinefinish_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
-  $(".finished").on("click",function () {
+  $(".finished").click(function () {
     $(".finished_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.outonlinelist  ,.outlinemuban").removeClass("cor");
   })
-  $(".outonlinelist").on("click",function () {
+  $(".outonlinelist").click(function () {
     $(".outonlinelist_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
-  $(".outlinemuban").on("click",function () {
+  $(".outlinemuban").click(function () {
     $(".outlinemuban_later").fadeIn().children("a").eq(0).click();
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline ,.outline_pz ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
-  $(".outline_pz ").on("click",function () {
+  $(".outline_pz ").click(function () {
     $(this).addClass('cor').siblings().removeClass('cor');
     $(".outline  ,.waitfinish ,.onlinefinish ,.finished").removeClass("cor");
   })
-  $(".outline").on("click",function () {
+  $(".outline").click(function () {
     $(this).addClass("cor").find("cor").removeClass("cor");
     $(".outline_pz ,.waitfinish ,.onlinefinish  ,.finished").removeClass("cor");
   })
-  $(".outline_pz").on("click",function () {
+  $(".outline_pz").click(function () {
     $(this).addClass("cor").find("cor").removeClass("cor");
     $(".outline ,.outonlinelist ,.outlinemuban").removeClass("cor");
   })
-  $(".table tbody tr").on("click",function () {
+  $(".table tbody tr").click(function () {
     $(this).addClass('cor').siblings().removeClass('cor');
   })
   /*任务清单 已完成*/
-  $(".look_list_finish").on("click",function () {
+  $(".look_list_finish").click(function () {
     $("#loading").fadeIn();
     $(".add_list").fadeIn();
   })
-  $(".close_list_finish ,.ipt_cancel_list_fin").on("click",function () {
+  $(".close_list_finish ,.ipt_cancel_list_fin").click(function () {
     if($('.add_list_play').is(':hidden')){
       $(".add_list").fadeOut();
       $("#loading").fadeOut();
@@ -196,35 +196,35 @@ $(function () {
     }
   })
   /*任务清单 待完成 执行中*/
-  $(".look_list_wait").on("click",function () {
+  $(".look_list_wait").click(function () {
     $("#loading").fadeIn();
     $(".add_listonline").fadeIn();
   })
-  $(".close_list_online ,.ipt_cancel_list").on("click",function () {
+  $(".close_list_online ,.ipt_cancel_list").click(function () {
     $(".add_listonline").fadeOut();
     $("#loading").fadeOut();
   })
   /*任务清单 已完成——交互记录*/
-  $(".play").on("click",function () {
+  $(".play").click(function () {
     $(".add_list_play").fadeIn();
   })
-  $(".close_play").on("click",function () {
+  $(".close_play").click(function () {
     var audio = $("#audio");
     var stop = audio.get(0);
     stop.pause();
     $(".add_list_play").fadeOut();
   })
   /*外呼任务管理操作*/
-  $(".img_add").on("click",function () {
+  $(".img_add").click(function () {
     $(".inonerlist").fadeIn();
     $("#loading").fadeIn();
   })
-  $(".img_edit").on("click",function () {
+  $(".img_edit").click(function () {
     $("#newaddproai").fadeIn();
     $("#loading").fadeIn();
     $(".addproaimange_text").html("修改智能外呼任务");
   })
-  $(".close_outlong ,.ipt_cancel_long").on("click",function () {
+  $(".close_outlong ,.ipt_cancel_long").click(function () {
     if($('.add_manlist').is(':hidden')){
       $(".inonerlist").fadeOut();
       $(".add_manlist").fadeOut();
@@ -233,7 +233,7 @@ $(function () {
       $('.add_manlist').fadeOut()
     }
   })
-  $(".close_two").on("click",function () {
+  $(".close_two").click(function () {
     if($('#newaddproai').is(':hidden')){
       $(".inonerlist").fadeOut();
       $("#loading").fadeOut();
@@ -244,7 +244,7 @@ $(function () {
     }
   })
   /*tab切换交互*/
-  $(".right_a").on("click",function () {
+  $(".right_a").click(function () {
     if($(this).is(':hidden')){
     }else{
       $(this).parent().fadeOut();
@@ -329,22 +329,33 @@ $(function () {
 
 })
 /*调用接口*/
-function aaa() {
-  var data = {
-    tenantid:1
-  }
-  console.log(data);
+function play(){
+  var urlst1 = "https://cc.egoonet.com:9099/v1/history/all/boc/007702B76ECB000C/boc_1000000";
   $.ajax({
-    async : true,
-    url : "https://cc.egoonet.com:9099/v1/faq/classes/1",
-    type : "GET",
-    dataType : "jsonp", // 返回的数据类型，设置为JSONP方式
-    jsonp : 'callback', //指定一个查询参数名称来覆盖默认的 jsonp 回调参数名 callback
-    jsonpCallback: 'handleResponse', //设置回调函数名
-    data :data,
-    success: function(jsonp){
-      console.log(jsonp);
+    type: "GET",
+    url: urlst1,
+    success: function (data) {
+      $(".play").on("click",function () {
+        $(".play_mic").attr('src',urlst1 + data.sessionDetail.recid);
+        var url = $(".play_mic").attr("src");
+        console.log(url)
+      })
     }
-  });
+  })
 }
+
+  /*$.ajax({
+    async : true,
+    url : "https://cc.egoonet.com:9099/v1/history/all/boc/007702B76ECB000C/boc_1000000",
+    type : "GET",
+    dataType : "jsonp",
+    jsonp : "callback",
+    jsonpCallback: "handleResponse",
+    success: function(result){
+      console.log(result);
+    },
+    error:function (result) {
+      console.log(result)
+    }
+  });*/
 
