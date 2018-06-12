@@ -48,7 +48,7 @@ $(function () {
 
   $('#edit').editable({inlineMode: false, alwaysBlank: true})
   /*页面加载时候就调用数据接口*/
-  $.ajax({
+ /* $.ajax({
     type: "GET",
     url: '',
     success: function (json) {
@@ -69,7 +69,7 @@ $(function () {
       }
       $('.table tbody').append(htmlstr);
     }
-  })
+  })*/
 
 
 
@@ -276,7 +276,7 @@ $(function () {
       $(this).parent().fadeOut();
     }
   })
-  /*上传文件*/
+  /*上传文件获取文件名称*/
   $("#fUpload").on('change', function () {
     $("#ulList").empty();
     var fp = $("#fUpload");
