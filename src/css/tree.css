@@ -743,11 +743,12 @@
 .add_list_play {
   position: absolute;
   width: 600px;
-  height: 520px;
+  height: 510px;
   top: 10%;
   background: #fff;
   z-index: 150;
   display: none;
+  border: 1px solid #333333;
 }
 .add_listonline {
   position: absolute;

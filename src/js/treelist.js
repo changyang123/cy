@@ -47,6 +47,32 @@ $(function () {
   timesetting($("#end_time_out").val(timestr));
 
   $('#edit').editable({inlineMode: false, alwaysBlank: true})
+  /*页面加载时候就调用数据接口*/
+  $.ajax({
+    type: "GET",
+    url: '',
+    success: function (json) {
+      var htmlstr = "";
+      var result = json.dataSet;
+      var resultLen = result.length;
+      $('.left-table table tbody').find('tr').remove();
+      for (var i = 0; i < resultLen; i++) {
+        htmlstr += '<tr>' +
+          '<td style="display: none">' + result[i].id + '</td>' +
+          '<td>' + result[i].batchNum + '</td>' +
+          '<td>' + result[i].name + '</td>' +
+          '<td>' + result[i].unit + '</td>' +
+          '<td>' + result[i].cost + '</td>' +
+          '<td>' + result[i].mode + '</td>' +
+          '<td>' + result[i].amount + '</td>' +
+          '</tr>'
+      }
+      $('.table tbody').append(htmlstr);
+    }
+  })
+
+
+
   /*新增外呼任务*/
   $(".newaddpro").click(function () {
     $("#loading").fadeIn();
@@ -328,7 +354,7 @@ $(function () {
   $(".right_padding").width($(window).width()-$(".accordion").width());
 
 })
-/*调用接口*/
+/*音频调用接口*/
 function play(){
   $(".add_list_play").fadeIn();
   var urlst1 = "https://cc.egoonet.com:9099/v1/history/all/boc/007702B76ECB000C/boc_1000000";
@@ -338,8 +364,8 @@ function play(){
     url: urlst1,
     success: function (data) {
       var recordUrl = data.sessionDetail.recid;
-        $(".play_mic").attr('src',urlAll + '/v1/download?filename='+ recordUrl );
-        var url = $(".play_mic").attr("src");
+      $(".play_mic").attr('src',urlAll + '/v1/download?filename='+ recordUrl );
+      var url = $(".play_mic").attr("src");
     }
   })
 }
