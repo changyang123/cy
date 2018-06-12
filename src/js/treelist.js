@@ -205,9 +205,9 @@ $(function () {
     $("#loading").fadeOut();
   })
   /*任务清单 已完成——交互记录*/
-  $(".play").click(function () {
+/*  $(".play").click(function () {
     $(".add_list_play").fadeIn();
-  })
+  })*/
   $(".close_play").click(function () {
     var audio = $("#audio");
     var stop = audio.get(0);
@@ -330,19 +330,20 @@ $(function () {
 })
 /*调用接口*/
 function play(){
+  $(".add_list_play").fadeIn();
   var urlst1 = "https://cc.egoonet.com:9099/v1/history/all/boc/007702B76ECB000C/boc_1000000";
   $.ajax({
     type: "GET",
     url: urlst1,
     success: function (data) {
-      $(".play").on("click",function () {
-        $(".play_mic").attr('src',urlst1 + data.sessionDetail.recid);
+        $(".play_mic").attr('src','../src/img/123.mp3');
         var url = $(".play_mic").attr("src");
         console.log(url)
-      })
+
     }
   })
 }
+
 
   /*$.ajax({
     async : true,
