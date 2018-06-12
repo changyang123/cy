@@ -332,14 +332,14 @@ $(function () {
 function play(){
   $(".add_list_play").fadeIn();
   var urlst1 = "https://cc.egoonet.com:9099/v1/history/all/boc/007702B76ECB000C/boc_1000000";
+  var urlAll = "https://cc.egoonet.com:9099/"
   $.ajax({
     type: "GET",
     url: urlst1,
     success: function (data) {
-        $(".play_mic").attr('src','../src/img/123.mp3');
+      var recordUrl = data.sessionDetail.recid;
+        $(".play_mic").attr('src',urlAll + '/v1/download?filename='+ recordUrl );
         var url = $(".play_mic").attr("src");
-        console.log(url)
-
     }
   })
 }
